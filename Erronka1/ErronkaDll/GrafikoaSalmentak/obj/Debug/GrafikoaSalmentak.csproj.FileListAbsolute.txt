@@ -1,0 +1,8 @@
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\bin\Debug\GrafikoaSalmentak.dll
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\bin\Debug\GrafikoaSalmentak.pdb
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Debug\GrafikoaSalmentak.csproj.AssemblyReference.cache
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Debug\GrafikoaSalmentak.UserControl2.resources
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Debug\GrafikoaSalmentak.csproj.GenerateResource.cache
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Debug\GrafikoaSalmentak.csproj.CoreCompileInputs.cache
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Debug\GrafikoaSalmentak.dll
+D:\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Debug\GrafikoaSalmentak.pdb

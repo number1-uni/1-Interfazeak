@@ -196,7 +196,6 @@
             this.Controls.Add(this.Urtealbl);
             this.Controls.Add(this.AginteKoadrolbl);
             this.Controls.Add(this.EstrellaPicBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Erosketak";
             this.Text = "Erosketak";
             this.Load += new System.EventHandler(this.Erosketak_Load);

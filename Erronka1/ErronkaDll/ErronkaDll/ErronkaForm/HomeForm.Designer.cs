@@ -115,7 +115,6 @@
             this.Controls.Add(this.Erosketakbtn);
             this.Controls.Add(this.Salmentakbtn);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

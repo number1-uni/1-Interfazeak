@@ -271,7 +271,6 @@
             this.Controls.Add(this.HilabetekoLaburpenalbl);
             this.Controls.Add(this.AginteKoadrolbl);
             this.Controls.Add(this.EstrellaPicBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Laburpena";
             this.Text = "Laburpena";
             this.Load += new System.EventHandler(this.Laburpena_Load);

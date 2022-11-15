@@ -196,7 +196,6 @@
             this.Controls.Add(this.AginteKoadrolbl);
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.userControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Salmentak";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);

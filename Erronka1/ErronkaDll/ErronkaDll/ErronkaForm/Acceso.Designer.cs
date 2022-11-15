@@ -168,7 +168,6 @@
             this.Controls.Add(this.user);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Acceso";
             this.Text = "Acceso";
             this.panel1.ResumeLayout(false);

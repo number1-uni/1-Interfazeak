@@ -41,11 +41,6 @@ namespace ErronkaForm
                 IrabaziakNumlbl.Text = resultadoIrabaziak[hilabetea].TotalSoldProducts.ToString() + "€";
                 double Irabaziak = Double.Parse(resultadoIrabaziak[hilabetea].TotalSoldProducts.ToString());
 
-                //var resultadoBought = db.purchase_order_line
-                //.Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
-                //.GroupBy(x => x.write_date.Month)
-                //.ToDictionary(g => g.Key, g => new { TotalBoughtProducts = g.Sum(b => b.product_uom_qty) });
-                //GuztiraNumlbl.Text = resultadoBought[hilabetea].TotalBoughtProducts.ToString() + " Produktu";
 
                 var resultadoGastuak = db.purchase_order_line
                 .Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
@@ -62,15 +57,16 @@ namespace ErronkaForm
 
                 .Include("res_partner")
                 .Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
-                .GroupBy(x => x.name)//el nombre que aparece abajo en los valores
-                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));// lo que sale en el grafico, por lo que lo vamos a medir 
+                .GroupBy(x => x.name)
+                .Take(5)
+                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));
 
 
                 if (saleorder1 != null)
                 {
                     if (saleorder1.Count > 0)
                     {
-                        var grafikoa = userControl11.Controls // el grafico que queremos usar
+                        var grafikoa = userControl11.Controls 
                         .OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
                         foreach (var grafiko in grafikoa)
                         {
@@ -106,11 +102,7 @@ namespace ErronkaForm
                 IrabaziakNumlbl.Text = resultadoIrabaziak[hilabetea].TotalSoldProducts.ToString() + "€";
                 double Irabaziak = Double.Parse(resultadoIrabaziak[hilabetea].TotalSoldProducts.ToString());
 
-                //var resultadoBought = db.purchase_order_line
-                //.Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
-                //.GroupBy(x => x.write_date.Month)
-                //.ToDictionary(g => g.Key, g => new { TotalBoughtProducts = g.Sum(b => b.product_uom_qty) });
-                //GuztiraNumlbl.Text = resultadoBought[hilabetea].TotalBoughtProducts.ToString() + " Produktu";
+
 
                 var resultadoGastuak = db.purchase_order_line
                 .Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
@@ -127,15 +119,16 @@ namespace ErronkaForm
 
                 .Include("res_partner")
                 .Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
-                .GroupBy(x => x.name)//el nombre que aparece abajo en los valores
-                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));// lo que sale en el grafico, por lo que lo vamos a medir 
+                .GroupBy(x => x.name)
+                .Take(5)
+                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty)); 
 
 
                 if (saleorder1 != null)
                 {
                     if (saleorder1.Count > 0)
                     {
-                        var grafikoa = userControl11.Controls // el grafico que queremos usar
+                        var grafikoa = userControl11.Controls 
                         .OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
                         foreach (var grafiko in grafikoa)
                         {
@@ -217,11 +210,7 @@ namespace ErronkaForm
                 IrabaziakNumlbl.Text = resultadoIrabaziak[hilabetea].TotalSoldProducts.ToString() + "€";
                 double Irabaziak = Double.Parse(resultadoIrabaziak[hilabetea].TotalSoldProducts.ToString());
 
-                //var resultadoBought = db.purchase_order_line
-                //.Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
-                //.GroupBy(x => x.write_date.Month)
-                //.ToDictionary(g => g.Key, g => new { TotalBoughtProducts = g.Sum(b => b.product_uom_qty) });
-                //GuztiraNumlbl.Text = resultadoBought[hilabetea].TotalBoughtProducts.ToString() + " Produktu";
+
 
                 var resultadoGastuak = db.purchase_order_line
                 .Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
@@ -238,15 +227,16 @@ namespace ErronkaForm
 
                 .Include("res_partner")
                 .Where(x => x.write_date.Year.Equals(urtea) && x.write_date.Month.Equals(hilabetea))
-                .GroupBy(x => x.name)//el nombre que aparece abajo en los valores
-                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));// lo que sale en el grafico, por lo que lo vamos a medir 
+                .GroupBy(x => x.name)
+                .Take(5)
+                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));
 
 
                 if (saleorder1 != null)
                 {
                     if (saleorder1.Count > 0)
                     {
-                        var grafikoa = userControl11.Controls // el grafico que queremos usar
+                        var grafikoa = userControl11.Controls 
                         .OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
                         foreach (var grafiko in grafikoa)
                         {

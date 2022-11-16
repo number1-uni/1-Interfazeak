@@ -47,6 +47,11 @@
             this.userControl11 = new ErronkaDll.UserControl1();
             this.ItxiBtn = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.Urtea = new System.Windows.Forms.HelpProvider();
+            this.Hilabetea = new System.Windows.Forms.HelpProvider();
+            this.BorobilChar = new System.Windows.Forms.HelpProvider();
+            this.Taula = new System.Windows.Forms.HelpProvider();
+            this.ItxiBotoia = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.EstrellaPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -84,12 +89,14 @@
             // cmbUrteaLaburpena
             // 
             this.cmbUrteaLaburpena.FormattingEnabled = true;
+            this.Urtea.SetHelpString(this.cmbUrteaLaburpena, "Enpresaren laburpena ikusteko aukeratu urtea");
             this.cmbUrteaLaburpena.Items.AddRange(new object[] {
             "2022",
             "2021",
             "2020"});
             this.cmbUrteaLaburpena.Location = new System.Drawing.Point(950, 102);
             this.cmbUrteaLaburpena.Name = "cmbUrteaLaburpena";
+            this.Urtea.SetShowHelp(this.cmbUrteaLaburpena, true);
             this.cmbUrteaLaburpena.Size = new System.Drawing.Size(121, 21);
             this.cmbUrteaLaburpena.TabIndex = 13;
             this.cmbUrteaLaburpena.Text = "2022";
@@ -98,6 +105,7 @@
             // cmbHilabeteaLaburpena
             // 
             this.cmbHilabeteaLaburpena.FormattingEnabled = true;
+            this.Hilabetea.SetHelpString(this.cmbHilabeteaLaburpena, "Enpresaren laburpena ikusteko aukeratu hilabetea");
             this.cmbHilabeteaLaburpena.Items.AddRange(new object[] {
             "01",
             "02",
@@ -113,6 +121,7 @@
             "12"});
             this.cmbHilabeteaLaburpena.Location = new System.Drawing.Point(1089, 102);
             this.cmbHilabeteaLaburpena.Name = "cmbHilabeteaLaburpena";
+            this.Hilabetea.SetShowHelp(this.cmbHilabeteaLaburpena, true);
             this.cmbHilabeteaLaburpena.Size = new System.Drawing.Size(121, 21);
             this.cmbHilabeteaLaburpena.TabIndex = 14;
             this.cmbHilabeteaLaburpena.Text = "01";
@@ -220,8 +229,10 @@
             // 
             // userControl11
             // 
+            this.BorobilChar.SetHelpString(this.userControl11, "Enpresak hilabete horretan gehien saldutako 5 produktuak erakusten ditu");
             this.userControl11.Location = new System.Drawing.Point(-2, 174);
             this.userControl11.Name = "userControl11";
+            this.BorobilChar.SetShowHelp(this.userControl11, true);
             this.userControl11.Size = new System.Drawing.Size(800, 450);
             this.userControl11.TabIndex = 17;
             // 
@@ -231,9 +242,11 @@
             this.ItxiBtn.FlatAppearance.BorderSize = 0;
             this.ItxiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ItxiBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ItxiBotoia.SetHelpString(this.ItxiBtn, "Atzera bueltatzeko botoia");
             this.ItxiBtn.Image = ((System.Drawing.Image)(resources.GetObject("ItxiBtn.Image")));
             this.ItxiBtn.Location = new System.Drawing.Point(1422, 1);
             this.ItxiBtn.Name = "ItxiBtn";
+            this.ItxiBotoia.SetShowHelp(this.ItxiBtn, true);
             this.ItxiBtn.Size = new System.Drawing.Size(23, 23);
             this.ItxiBtn.TabIndex = 28;
             this.ItxiBtn.UseVisualStyleBackColor = false;
@@ -242,8 +255,10 @@
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Taula.SetHelpString(this.dataGridView, "Enpresak egindako salmentak erakusten ditu");
             this.dataGridView.Location = new System.Drawing.Point(804, 317);
             this.dataGridView.Name = "dataGridView";
+            this.Taula.SetShowHelp(this.dataGridView, true);
             this.dataGridView.Size = new System.Drawing.Size(366, 226);
             this.dataGridView.TabIndex = 29;
             // 
@@ -271,6 +286,9 @@
             this.Controls.Add(this.HilabetekoLaburpenalbl);
             this.Controls.Add(this.AginteKoadrolbl);
             this.Controls.Add(this.EstrellaPicBox);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Laburpena";
             this.Text = "Laburpena";
             this.Load += new System.EventHandler(this.Laburpena_Load);
@@ -301,5 +319,10 @@
         private ErronkaDll.UserControl1 userControl11;
         private System.Windows.Forms.Button ItxiBtn;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.HelpProvider Urtea;
+        private System.Windows.Forms.HelpProvider Hilabetea;
+        private System.Windows.Forms.HelpProvider BorobilChar;
+        private System.Windows.Forms.HelpProvider Taula;
+        private System.Windows.Forms.HelpProvider ItxiBotoia;
     }
 }

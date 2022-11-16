@@ -42,6 +42,10 @@
             this.Irabaziaklbl = new System.Windows.Forms.Label();
             this.IrabaziakNumlbl = new System.Windows.Forms.Label();
             this.ItxiBtn = new System.Windows.Forms.Button();
+            this.Urtea = new System.Windows.Forms.HelpProvider();
+            this.BorobilChar = new System.Windows.Forms.HelpProvider();
+            this.BarChar = new System.Windows.Forms.HelpProvider();
+            this.ItxiBotoi = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.EstrellaPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,12 +82,14 @@
             // cmbUrteaSalmentak
             // 
             this.cmbUrteaSalmentak.FormattingEnabled = true;
+            this.Urtea.SetHelpString(this.cmbUrteaSalmentak, "Enpresaren salmentak ikusteko aukeratu urtea");
             this.cmbUrteaSalmentak.Items.AddRange(new object[] {
             "2022",
             "2021",
             "2020"});
             this.cmbUrteaSalmentak.Location = new System.Drawing.Point(948, 95);
             this.cmbUrteaSalmentak.Name = "cmbUrteaSalmentak";
+            this.Urtea.SetShowHelp(this.cmbUrteaSalmentak, true);
             this.cmbUrteaSalmentak.Size = new System.Drawing.Size(121, 21);
             this.cmbUrteaSalmentak.TabIndex = 8;
             this.cmbUrteaSalmentak.Text = "2022";
@@ -121,15 +127,19 @@
             // 
             // userControl1
             // 
+            this.BorobilChar.SetHelpString(this.userControl1, "Enpresak urteko gehien saldutako 5 produktuak erakusten ditu");
             this.userControl1.Location = new System.Drawing.Point(70, 160);
             this.userControl1.Name = "userControl1";
+            this.BorobilChar.SetShowHelp(this.userControl1, true);
             this.userControl1.Size = new System.Drawing.Size(682, 455);
             this.userControl1.TabIndex = 0;
             // 
             // userControl21
             // 
+            this.BarChar.SetHelpString(this.userControl21, "Enpresaren salmenta kantitatea hilabetez");
             this.userControl21.Location = new System.Drawing.Point(676, 173);
             this.userControl21.Name = "userControl21";
+            this.BarChar.SetShowHelp(this.userControl21, true);
             this.userControl21.Size = new System.Drawing.Size(775, 465);
             this.userControl21.TabIndex = 1;
             // 
@@ -169,9 +179,11 @@
             this.ItxiBtn.FlatAppearance.BorderSize = 0;
             this.ItxiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ItxiBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ItxiBotoi.SetHelpString(this.ItxiBtn, "Atzera bueltatzeko botoia");
             this.ItxiBtn.Image = ((System.Drawing.Image)(resources.GetObject("ItxiBtn.Image")));
             this.ItxiBtn.Location = new System.Drawing.Point(1416, 2);
             this.ItxiBtn.Name = "ItxiBtn";
+            this.ItxiBotoi.SetShowHelp(this.ItxiBtn, true);
             this.ItxiBtn.Size = new System.Drawing.Size(23, 23);
             this.ItxiBtn.TabIndex = 23;
             this.ItxiBtn.UseVisualStyleBackColor = false;
@@ -196,6 +208,9 @@
             this.Controls.Add(this.AginteKoadrolbl);
             this.Controls.Add(this.userControl21);
             this.Controls.Add(this.userControl1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Salmentak";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -220,6 +235,10 @@
         private System.Windows.Forms.Label Irabaziaklbl;
         private System.Windows.Forms.Label IrabaziakNumlbl;
         private System.Windows.Forms.Button ItxiBtn;
+        private System.Windows.Forms.HelpProvider Urtea;
+        private System.Windows.Forms.HelpProvider BorobilChar;
+        private System.Windows.Forms.HelpProvider BarChar;
+        private System.Windows.Forms.HelpProvider ItxiBotoi;
     }
 }
 

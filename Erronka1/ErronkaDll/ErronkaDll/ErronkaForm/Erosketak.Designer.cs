@@ -42,6 +42,10 @@
             this.GastuakNumlbl = new System.Windows.Forms.Label();
             this.userControl1 = new ErronkaDll.UserControl1();
             this.ItxiBtn = new System.Windows.Forms.Button();
+            this.Urtea = new System.Windows.Forms.HelpProvider();
+            this.BarChar = new System.Windows.Forms.HelpProvider();
+            this.BorobilChar = new System.Windows.Forms.HelpProvider();
+            this.Itxi = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.EstrellaPicBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,12 +82,14 @@
             // cmbUrteaErosketak
             // 
             this.cmbUrteaErosketak.FormattingEnabled = true;
+            this.Urtea.SetHelpString(this.cmbUrteaErosketak, "Enpresaren erosketak ikusteko aukeratu urtea");
             this.cmbUrteaErosketak.Items.AddRange(new object[] {
             "2022",
             "2021",
             "2020"});
             this.cmbUrteaErosketak.Location = new System.Drawing.Point(948, 95);
             this.cmbUrteaErosketak.Name = "cmbUrteaErosketak";
+            this.Urtea.SetShowHelp(this.cmbUrteaErosketak, true);
             this.cmbUrteaErosketak.Size = new System.Drawing.Size(121, 21);
             this.cmbUrteaErosketak.TabIndex = 10;
             this.cmbUrteaErosketak.Text = "2022";
@@ -111,8 +117,10 @@
             // 
             // userControl21
             // 
+            this.BarChar.SetHelpString(this.userControl21, "Enpresaren erosketa kantitatea hilabetez");
             this.userControl21.Location = new System.Drawing.Point(684, 160);
             this.userControl21.Name = "userControl21";
+            this.BarChar.SetShowHelp(this.userControl21, true);
             this.userControl21.Size = new System.Drawing.Size(770, 465);
             this.userControl21.TabIndex = 14;
             // 
@@ -158,8 +166,10 @@
             // 
             // userControl1
             // 
+            this.BorobilChar.SetHelpString(this.userControl1, "Enpresak urteko gehien erositako 5 produktuak erakusten ditu");
             this.userControl1.Location = new System.Drawing.Point(70, 160);
             this.userControl1.Name = "userControl1";
+            this.BorobilChar.SetShowHelp(this.userControl1, true);
             this.userControl1.Size = new System.Drawing.Size(682, 455);
             this.userControl1.TabIndex = 13;
             // 
@@ -169,9 +179,11 @@
             this.ItxiBtn.FlatAppearance.BorderSize = 0;
             this.ItxiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ItxiBtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Itxi.SetHelpString(this.ItxiBtn, "Atzera bueltatzeko botoia");
             this.ItxiBtn.Image = ((System.Drawing.Image)(resources.GetObject("ItxiBtn.Image")));
             this.ItxiBtn.Location = new System.Drawing.Point(1416, 0);
             this.ItxiBtn.Name = "ItxiBtn";
+            this.Itxi.SetShowHelp(this.ItxiBtn, true);
             this.ItxiBtn.Size = new System.Drawing.Size(23, 23);
             this.ItxiBtn.TabIndex = 22;
             this.ItxiBtn.UseVisualStyleBackColor = false;
@@ -196,6 +208,9 @@
             this.Controls.Add(this.Urtealbl);
             this.Controls.Add(this.AginteKoadrolbl);
             this.Controls.Add(this.EstrellaPicBox);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Erosketak";
             this.Text = "Erosketak";
             this.Load += new System.EventHandler(this.Erosketak_Load);
@@ -220,5 +235,9 @@
         private System.Windows.Forms.Label Gastuaklbl;
         private System.Windows.Forms.Label GastuakNumlbl;
         private System.Windows.Forms.Button ItxiBtn;
+        private System.Windows.Forms.HelpProvider Urtea;
+        private System.Windows.Forms.HelpProvider BarChar;
+        private System.Windows.Forms.HelpProvider BorobilChar;
+        private System.Windows.Forms.HelpProvider Itxi;
     }
 }

@@ -35,6 +35,10 @@
             this.Laburpenabtn = new System.Windows.Forms.Button();
             this.CerrarSesion = new System.Windows.Forms.Button();
             this.CerrarSesionlbl = new System.Windows.Forms.Label();
+            this.Salmentak = new System.Windows.Forms.HelpProvider();
+            this.Erosketak = new System.Windows.Forms.HelpProvider();
+            this.Laburpena = new System.Windows.Forms.HelpProvider();
+            this.ItxiSesio = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,8 +55,10 @@
             // Salmentakbtn
             // 
             this.Salmentakbtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salmentak.SetHelpString(this.Salmentakbtn, "Click egin Enpresako salmentak ikusteko");
             this.Salmentakbtn.Location = new System.Drawing.Point(94, 176);
             this.Salmentakbtn.Name = "Salmentakbtn";
+            this.Salmentak.SetShowHelp(this.Salmentakbtn, true);
             this.Salmentakbtn.Size = new System.Drawing.Size(126, 34);
             this.Salmentakbtn.TabIndex = 5;
             this.Salmentakbtn.Text = "Salmentak";
@@ -62,8 +68,10 @@
             // Erosketakbtn
             // 
             this.Erosketakbtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Erosketak.SetHelpString(this.Erosketakbtn, "Click egin Enpresako erosketak ikusteko");
             this.Erosketakbtn.Location = new System.Drawing.Point(338, 176);
             this.Erosketakbtn.Name = "Erosketakbtn";
+            this.Erosketak.SetShowHelp(this.Erosketakbtn, true);
             this.Erosketakbtn.Size = new System.Drawing.Size(126, 34);
             this.Erosketakbtn.TabIndex = 6;
             this.Erosketakbtn.Text = "Erosketak";
@@ -73,8 +81,10 @@
             // Laburpenabtn
             // 
             this.Laburpenabtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Laburpena.SetHelpString(this.Laburpenabtn, "Enpresaren laburpena erakusten dizu");
             this.Laburpenabtn.Location = new System.Drawing.Point(566, 176);
             this.Laburpenabtn.Name = "Laburpenabtn";
+            this.Laburpena.SetShowHelp(this.Laburpenabtn, true);
             this.Laburpenabtn.Size = new System.Drawing.Size(126, 34);
             this.Laburpenabtn.TabIndex = 7;
             this.Laburpenabtn.Text = "Laburpena";
@@ -86,9 +96,11 @@
             this.CerrarSesion.FlatAppearance.BorderSize = 0;
             this.CerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItxiSesio.SetHelpString(this.CerrarSesion, "Zure sesioa itxi egiten da.");
             this.CerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("CerrarSesion.Image")));
             this.CerrarSesion.Location = new System.Drawing.Point(727, 385);
             this.CerrarSesion.Name = "CerrarSesion";
+            this.ItxiSesio.SetShowHelp(this.CerrarSesion, true);
             this.CerrarSesion.Size = new System.Drawing.Size(61, 53);
             this.CerrarSesion.TabIndex = 8;
             this.CerrarSesion.UseVisualStyleBackColor = true;
@@ -115,6 +127,9 @@
             this.Controls.Add(this.Erosketakbtn);
             this.Controls.Add(this.Salmentakbtn);
             this.Controls.Add(this.pictureBox1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "HomeForm";
             this.Text = "HomeForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -131,5 +146,9 @@
         private System.Windows.Forms.Button Laburpenabtn;
         private System.Windows.Forms.Button CerrarSesion;
         private System.Windows.Forms.Label CerrarSesionlbl;
+        private System.Windows.Forms.HelpProvider Salmentak;
+        private System.Windows.Forms.HelpProvider Erosketak;
+        private System.Windows.Forms.HelpProvider Laburpena;
+        private System.Windows.Forms.HelpProvider ItxiSesio;
     }
 }

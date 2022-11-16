@@ -38,7 +38,7 @@ namespace ErronkaForm
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrecta, intentelo otra vez.");
+                MessageBox.Show("Erabiltzailea edo pasahitza okerrak, saiatu berriro.");
             }
         }
 
@@ -64,7 +64,6 @@ namespace ErronkaForm
                 password.PasswordChar = '\0';
             }
         }
-
 
     }
 }

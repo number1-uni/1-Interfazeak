@@ -31,7 +31,7 @@ namespace ErronkaForm
                 int urtea = int.Parse(cmbUrteaSalmentak.Text.ToString());
 
                 //Sacar los productos vendidos del año 2022
-                //SELECT SUM(sale_order_line.product_uom_qty) AS TotalSoldProducts FROM sale_order_line where write_date between '2022-01-01' and '2022-12-31';
+                
                 var resultadoSold = db.sale_order_line
                 .Where(x => x.write_date.Year.Equals(urtea))
                 .GroupBy(x => x.write_date.Year)
@@ -40,7 +40,7 @@ namespace ErronkaForm
                 SalmentakNumlbl.Text = resultadoSold[urtea].TotalSoldProducts.ToString() + " Produktu";
 
                 //Sacar las ganancias del año 2022 
-                //SELECT SUM(sale_order_line.price_total) AS TotalSoldProducts FROM sale_order_line where write_date between '2022-01-01' and '2022-12-31';
+               
                 var resultadoIrabaziak = db.sale_order_line
                 .Where(x => x.write_date.Year.Equals(urtea))
                 .GroupBy(x => x.write_date.Year)
@@ -59,15 +59,15 @@ namespace ErronkaForm
                 
                 .Include("res_partner")
                 .Where(x => x.write_date.Year.Equals(urtea))
-                .GroupBy(x => x.write_date.Month)//el nombre que aparece abajo en los valores
-                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));// lo que sale en el grafico, por lo que lo vamos a medir 
+                .GroupBy(x => x.write_date.Month)
+                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));
 
 
                 if (saleorder1 != null)
                 {
                     if (saleorder1.Count > 0)
                     {
-                        var grafikoa = userControl21.Controls // el grafico que queremos usar
+                        var grafikoa = userControl21.Controls 
                         .OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
                         foreach (var grafiko in grafikoa)
                         {
@@ -89,10 +89,10 @@ namespace ErronkaForm
                     var saleorder2 = db.sale_order_line
                     .Include("res_partner")
                     .Where(x => x.write_date.Year.Equals(urtea))
-                    .GroupBy(x => x.name)//el nombre que aparece abajo en los valores
+                    .GroupBy(x => x.name)
                     .OrderByDescending(x => x.Sum(b => b.product_uom_qty))
-                    .Take(3)
-                    .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));// lo que sale en el grafico, por lo que lo vamos a medir 
+                    .Take(5)
+                    .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));
 
 
                     if (saleorder2 != null)
@@ -150,8 +150,8 @@ namespace ErronkaForm
 
                 .Include("res_partner")
                 .Where(x => x.write_date.Year.Equals(urtea))
-                .GroupBy(x => x.write_date.Month)//el nombre que aparece abajo en los valores
-                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));// lo que sale en el grafico, por lo que lo vamos a medir 
+                .GroupBy(x => x.write_date.Month)
+                .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));
 
                 if (saleorder1 != null)
                 {
@@ -181,15 +181,16 @@ namespace ErronkaForm
                 var saleorder2 = db.sale_order_line
             .Include("res_partner")
             .Where(x => x.write_date.Year.Equals(urtea))
-            .GroupBy(x => x.name)//el nombre que aparece abajo en los valores
-            .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));// lo que sale en el grafico, por lo que lo vamos a medir 
+            .GroupBy(x => x.name)
+            .Take(5)
+            .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));
 
 
             if (saleorder2 != null)
             {
                 if (saleorder2.Count > 0)
                 {
-                    var grafikoa = userControl1.Controls // el grafico que queremos usar
+                    var grafikoa = userControl1.Controls 
                     .OfType<System.Windows.Forms.DataVisualization.Charting.Chart>();
                     foreach (var grafiko in grafikoa)
                     {

@@ -39,6 +39,11 @@
             this.entrar = new System.Windows.Forms.Button();
             this.erakutsi = new System.Windows.Forms.Button();
             this.ezkutatu = new System.Windows.Forms.Button();
+            this.Sartu = new System.Windows.Forms.HelpProvider();
+            this.Erabiltzailea = new System.Windows.Forms.HelpProvider();
+            this.Pasahitza = new System.Windows.Forms.HelpProvider();
+            this.PasIkus = new System.Windows.Forms.HelpProvider();
+            this.PasIkusEz = new System.Windows.Forms.HelpProvider();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,17 +87,21 @@
             // user
             // 
             this.user.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Erabiltzailea.SetHelpString(this.user, "Zure erabiltzailea sartu hemen");
             this.user.Location = new System.Drawing.Point(106, 237);
             this.user.Name = "user";
+            this.Erabiltzailea.SetShowHelp(this.user, true);
             this.user.Size = new System.Drawing.Size(238, 28);
             this.user.TabIndex = 2;
             // 
             // password
             // 
             this.password.Font = new System.Drawing.Font("Yu Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pasahitza.SetHelpString(this.password, "Zure pasahitza sartu hemen");
             this.password.Location = new System.Drawing.Point(106, 325);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
+            this.Pasahitza.SetShowHelp(this.password, true);
             this.password.Size = new System.Drawing.Size(238, 28);
             this.password.TabIndex = 3;
             // 
@@ -125,19 +134,23 @@
             this.entrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.entrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.entrar.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sartu.SetHelpString(this.entrar, "Erabiltzailea eta Pasahitza sartu, menu printzipalera joateko.");
             this.entrar.Location = new System.Drawing.Point(179, 434);
             this.entrar.Name = "entrar";
+            this.Sartu.SetShowHelp(this.entrar, true);
             this.entrar.Size = new System.Drawing.Size(110, 36);
             this.entrar.TabIndex = 7;
-            this.entrar.Text = "Entrar";
+            this.entrar.Text = "Sartu";
             this.entrar.UseVisualStyleBackColor = false;
             this.entrar.Click += new System.EventHandler(this.entrar_Click);
             // 
             // erakutsi
             // 
+            this.PasIkus.SetHelpString(this.erakutsi, "Pasahitza ikusteko botoiari eman.");
             this.erakutsi.Image = ((System.Drawing.Image)(resources.GetObject("erakutsi.Image")));
             this.erakutsi.Location = new System.Drawing.Point(350, 325);
             this.erakutsi.Name = "erakutsi";
+            this.PasIkus.SetShowHelp(this.erakutsi, true);
             this.erakutsi.Size = new System.Drawing.Size(29, 23);
             this.erakutsi.TabIndex = 8;
             this.erakutsi.UseVisualStyleBackColor = true;
@@ -145,9 +158,11 @@
             // 
             // ezkutatu
             // 
+            this.PasIkusEz.SetHelpString(this.ezkutatu, "Pasahitza ezkutatzeko click egin.");
             this.ezkutatu.Image = ((System.Drawing.Image)(resources.GetObject("ezkutatu.Image")));
             this.ezkutatu.Location = new System.Drawing.Point(375, 325);
             this.ezkutatu.Name = "ezkutatu";
+            this.PasIkusEz.SetShowHelp(this.ezkutatu, true);
             this.ezkutatu.Size = new System.Drawing.Size(28, 23);
             this.ezkutatu.TabIndex = 9;
             this.ezkutatu.UseVisualStyleBackColor = true;
@@ -168,6 +183,9 @@
             this.Controls.Add(this.user);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
+            this.HelpButton = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Acceso";
             this.Text = "Acceso";
             this.panel1.ResumeLayout(false);
@@ -189,5 +207,10 @@
         private System.Windows.Forms.Button entrar;
         private System.Windows.Forms.Button erakutsi;
         private System.Windows.Forms.Button ezkutatu;
+        private System.Windows.Forms.HelpProvider Erabiltzailea;
+        private System.Windows.Forms.HelpProvider Pasahitza;
+        private System.Windows.Forms.HelpProvider Sartu;
+        private System.Windows.Forms.HelpProvider PasIkus;
+        private System.Windows.Forms.HelpProvider PasIkusEz;
     }
 }

@@ -55,7 +55,7 @@
             // Salmentakbtn
             // 
             this.Salmentakbtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salmentak.SetHelpString(this.Salmentakbtn, "Click egin Enpresako salmentak ikusteko");
+            this.Salmentak.SetHelpString(this.Salmentakbtn, "Klik egin Enpresako salmentak ikusteko");
             this.Salmentakbtn.Location = new System.Drawing.Point(94, 176);
             this.Salmentakbtn.Name = "Salmentakbtn";
             this.Salmentak.SetShowHelp(this.Salmentakbtn, true);
@@ -68,7 +68,7 @@
             // Erosketakbtn
             // 
             this.Erosketakbtn.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Erosketak.SetHelpString(this.Erosketakbtn, "Click egin Enpresako erosketak ikusteko");
+            this.Erosketak.SetHelpString(this.Erosketakbtn, "Klik egin Enpresako erosketak ikusteko");
             this.Erosketakbtn.Location = new System.Drawing.Point(338, 176);
             this.Erosketakbtn.Name = "Erosketakbtn";
             this.Erosketak.SetShowHelp(this.Erosketakbtn, true);

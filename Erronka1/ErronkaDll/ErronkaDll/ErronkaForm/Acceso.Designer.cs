@@ -44,6 +44,7 @@
             this.Pasahitza = new System.Windows.Forms.HelpProvider();
             this.PasIkus = new System.Windows.Forms.HelpProvider();
             this.PasIkusEz = new System.Windows.Forms.HelpProvider();
+            this.Itxi = new System.Windows.Forms.HelpProvider();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,10 +66,12 @@
             this.Cerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.Cerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Itxi.SetHelpString(this.Cerrar, "Programa itxi egiten da");
             this.Cerrar.Image = ((System.Drawing.Image)(resources.GetObject("Cerrar.Image")));
             this.Cerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Cerrar.Location = new System.Drawing.Point(429, 3);
             this.Cerrar.Name = "Cerrar";
+            this.Itxi.SetShowHelp(this.Cerrar, true);
             this.Cerrar.Size = new System.Drawing.Size(32, 28);
             this.Cerrar.TabIndex = 0;
             this.Cerrar.UseVisualStyleBackColor = true;
@@ -158,7 +161,7 @@
             // 
             // ezkutatu
             // 
-            this.PasIkusEz.SetHelpString(this.ezkutatu, "Pasahitza ezkutatzeko click egin.");
+            this.PasIkusEz.SetHelpString(this.ezkutatu, "Pasahitza ezkutatzeko klik egin.");
             this.ezkutatu.Image = ((System.Drawing.Image)(resources.GetObject("ezkutatu.Image")));
             this.ezkutatu.Location = new System.Drawing.Point(375, 325);
             this.ezkutatu.Name = "ezkutatu";
@@ -212,5 +215,6 @@
         private System.Windows.Forms.HelpProvider Sartu;
         private System.Windows.Forms.HelpProvider PasIkus;
         private System.Windows.Forms.HelpProvider PasIkusEz;
+        private System.Windows.Forms.HelpProvider Itxi;
     }
 }

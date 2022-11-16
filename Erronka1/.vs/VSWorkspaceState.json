@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\ErronkaDll",
-    "\\ErronkaDll\\ErronkaDll"
+    "\\ErronkaDll\\ErronkaDll",
+    "\\ErronkaDll\\ErronkaDll\\ErronkaForm"
   ],
-  "SelectedNode": "\\ErronkaDll\\PhoneTic.sln",
+  "SelectedNode": "\\ErronkaDll\\ErronkaDll\\ErronkaForm\\Laburpena.cs",
   "PreviewInSolutionExplorer": false
 }

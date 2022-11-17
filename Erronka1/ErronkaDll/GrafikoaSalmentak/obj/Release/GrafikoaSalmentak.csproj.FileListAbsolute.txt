@@ -1,0 +1,8 @@
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\bin\Release\GrafikoaSalmentak.dll
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\bin\Release\GrafikoaSalmentak.pdb
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Release\GrafikoaSalmentak.csproj.AssemblyReference.cache
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Release\GrafikoaSalmentak.UserControl2.resources
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Release\GrafikoaSalmentak.csproj.GenerateResource.cache
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Release\GrafikoaSalmentak.csproj.CoreCompileInputs.cache
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Release\GrafikoaSalmentak.dll
+C:\Users\parra.raul\Desktop\Erronka1\ErronkaDll\GrafikoaSalmentak\obj\Release\GrafikoaSalmentak.pdb

@@ -137,7 +137,6 @@ namespace ErronkaForm
                 .Include("res_partner")
                 .Where(x => x.write_date.Year.Equals(urtea))
                 .GroupBy(x => x.write_date.Month)
-                .Take(5)
                 .ToDictionary(g => g.Key, g => g.Sum(b => b.product_uom_qty));
 
                
